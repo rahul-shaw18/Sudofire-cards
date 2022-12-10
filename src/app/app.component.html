@@ -1,0 +1,17 @@
+<div class="main-container">
+  <ng-container *ngFor="let detail of details">
+    <form class="col-2">
+      <i class="bi bi-x-circle close-btn" (click)="onClick(detail)"></i>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" [value]="detail.name" />
+      </div>
+      <div class="mb-3">
+        <label for="mobileNo" class="form-label">Mobile No:</label>
+        <input type="text" class="form-control" id="mobileNo" [value]="detail.mobileNo" />
+      </div>
+    </form>
+  </ng-container>
+</div>
+
+<router-outlet></router-outlet>
